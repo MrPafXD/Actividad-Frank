@@ -1,35 +1,36 @@
 function verificar() {
     const inputs = document.querySelectorAll('input');
-    let aciertos = 0;
+    let correctas = 0;
+
+    // Función para ignorar tildes, mayúsculas y espacios extras
+    const normalizar = (str) => 
+        str.normalize("NFD")
+           .replace(/[\u0300-\u036f]/g, "")
+           .toLowerCase()
+           .trim();
 
     inputs.forEach(input => {
-        const respuestaCorrecta = input.dataset.ans.toLowerCase();
-        const respuestaUsuario = input.value.toLowerCase().trim();
+        const correcta = normalizar(input.dataset.ans);
+        const usuario = normalizar(input.value);
 
-        if (respuestaUsuario === respuestaCorrecta) {
-            aciertos++;
-            input.style.color = "green";
-            input.style.borderBottom = "1px solid green";
+        if (usuario === correcta && usuario !== "") {
+            correctas++;
+            input.style.backgroundColor = "#d4edda"; // Verde éxito
+            input.style.color = "#155724";
         } else {
-            input.style.color = "red";
-            input.style.borderBottom = "1px solid red";
+            input.style.backgroundColor = "#f8d7da"; // Rojo error
+            input.style.color = "#721c24";
         }
     });
 
-    const porcentaje = ((aciertos / inputs.length) * 100).toFixed(0);
+    const porcentaje = ((correctas / inputs.length) * 100).toFixed(0);
     
     document.getElementById('juego').style.display = 'none';
-    const resSection = document.getElementById('resultado');
-    resSection.style.display = 'block';
-    
+    document.getElementById('resultado').style.display = 'block';
     document.getElementById('puntaje').innerText = porcentaje;
-    
+
     const mensaje = document.getElementById('mensaje');
-    if(porcentaje == 100) {
-        mensaje.innerText = "¡Excelente Ciudadano Higiénico!";
-    } else if (porcentaje > 50) {
-        mensaje.innerText = "Buen intento, pero aún quedan miasmas por limpiar.";
-    } else {
-        mensaje.innerText = "Debes estudiar más el Manual de Urbanidad.";
-    }
+    if(porcentaje == 100) mensaje.innerText = "¡Investigador Maestro del Higienismo!";
+    else if(porcentaje >= 70) mensaje.innerText = "Buen trabajo, la ciudad respira mejor.";
+    else mensaje.innerText = "Los miasmas persisten. Debes revisar los archivos.";
 }

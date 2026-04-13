@@ -3,64 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gran Reto: Bogotá Higiénica</title>
+    <title>Reto Histórico: Bogotá Higiénica</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="pergamino">
         <header>
-            <h1>Crónicas del Régimen Higienista</h1>
-            <p>Completa los 10 folios del archivo para sanear la ciudad.</p>
+            <h1>Archivo del Régimen Higienista</h1>
+            <p>Sanea la ciudad completando los 10 folios de la historia de Bogotá.</p>
         </header>
 
         <section id="juego">
             <div class="frase">
-                1. Miasma viene del griego <input type="text" data-ans="miaima"> e implica aires <input type="text" data-ans="pestilentes"> y malsanos [1, 2].
+                1. Miasma viene del griego <input type="text" data-ans="miaima"> e implica aires <input type="text" data-ans="pestilentes">.
             </div>
 
             <div class="frase">
-                2. El régimen miasmático relaciona el metabolismo <input type="text" data-ans="urbano"> con la gestión de los <input type="text" data-ans="desechos"> [1].
+                2. El régimen miasmático relaciona el metabolismo <input type="text" data-ans="urbano"> con la gestión de los <input type="text" data-ans="desechos">.
             </div>
 
             <div class="frase">
-                3. La solución era <input type="text" data-ans="separar"> lo sano de lo <input type="text" data-ans="insalubre"> y ventilar las calles [3].
+                3. La solución era <input type="text" data-ans="separar"> lo sano de lo <input type="text" data-ans="insalubre">.
             </div>
 
             <div class="frase">
-                4. En 1774, el virrey <input type="text" data-ans="Guirior"> dividió la ciudad en 4 <input type="text" data-ans="cuarteles"> y 8 barrios [3].
+                4. En 1774, el virrey <input type="text" data-ans="Guirior"> dividió la ciudad en 4 <input type="text" data-ans="cuarteles">.
             </div>
 
             <div class="frase">
-                5. La "Policía" no era una fuerza armada, sino reglas de <input type="text" data-ans="limpieza">, orden y <input type="text" data-ans="salud"> [3].
+                5. La "Policía" eran reglas para mantener el orden, la <input type="text" data-ans="limpieza"> y la <input type="text" data-ans="salud">.
             </div>
 
             <div class="frase">
-                6. Los manuales de <input type="text" data-ans="Urbanidad"> como el de <input type="text" data-ans="Carreño"> enseñaban el aseo individual [4].
+                6. Los manuales de <input type="text" data-ans="Urbanidad"> como el de <input type="text" data-ans="Carreño"> enseñaban el aseo.
             </div>
 
             <div class="frase">
-                7. En <input type="text" data-ans="1873"> se creó la Sociedad de <input type="text" data-ans="Medicina"> y Ciencias Naturales [5].
+                7. En <input type="text" data-ans="1873"> se creó la Sociedad de <input type="text" data-ans="Medicina"> y Ciencias Naturales.
             </div>
 
             <div class="frase">
-                8. En la Guerra de los <input type="text" data-ans="Mil Días">, los habitantes usaron la <input type="text" data-ans="basura"> como protesta [6].
+                8. En la Guerra de los <input type="text" data-ans="Mil Días">, se usó la <input type="text" data-ans="basura"> como protesta.
             </div>
 
             <div class="frase">
-                9. El transporte mecánico mediante <input type="text" data-ans="camiones"> se implementó a partir de <input type="text" data-ans="1928"> [7].
+                9. El transporte mediante <input type="text" data-ans="camiones"> se implementó a partir de <input type="text" data-ans="1928">.
             </div>
 
             <div class="frase">
-                10. El horno <input type="text" data-ans="crematorio"> se inauguró en <input type="text" data-ans="1934"> para incinerar residuos [8].
+                10. El horno <input type="text" data-ans="crematorio"> se inauguró en <input type="text" data-ans="1934"> para incinerar residuos.
             </div>
 
-            <button onclick="verificar()">Validar Archivo Histórico</button>
+            <button onclick="verificar()">Validar Crónicas</button>
         </section>
 
         <section id="resultado" style="display:none;">
             <h2 id="mensaje"></h2>
-            <p>Precisión de la investigación: <span id="puntaje"></span>%</p>
-            <button onclick="location.reload()">Reiniciar Investigación</button>
+            <p>Precisión Histórica: <span id="puntaje"></span>%</p>
+            <button onclick="location.reload()">Reiniciar Expedición</button>
         </section>
     </div>
     <script src="script.js"></script>
